@@ -1,4 +1,5 @@
-class TokensController < ApplicationController
+class Api::TokensController < ApplicationController
+
   def create
 
     user = User.find_by(username: params[:username])

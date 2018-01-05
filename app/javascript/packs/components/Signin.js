@@ -8,7 +8,7 @@ class Signin extends Component
     formData.append("username",this.inputNode1.value)
     formData.append("password",this.inputNode2.value)
 
-    fetch("http://localhost:3000/tokens",
+    fetch("http://localhost:3000/api/tokens",
   {method: 'POST', body: formData})
   .then(res => res.json()).then(res => (console.log(res.jwt),
   window.localStorage.setItem('jwt', res.jwt)

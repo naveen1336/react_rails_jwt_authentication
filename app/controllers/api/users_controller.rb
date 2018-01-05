@@ -1,4 +1,5 @@
-class UsersController < ApplicationController
+class Api::UsersController < ApplicationController
+
   def create
 
     input = User.new(params.permit(:username,:password))
